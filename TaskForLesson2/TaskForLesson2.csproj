@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="String_not_Sting.cs" />
+    <Compile Include="Tasks.cs" />
     <Compile Include="The_Magnificent_Ten.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

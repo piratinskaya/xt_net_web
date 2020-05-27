@@ -15,9 +15,9 @@ namespace TaskForLesson2
             return wordsArray;
         }
 
-        static void Averages()
+        static void Averages(string text)
         {
-            string text = Console.ReadLine();
+            
             //string text = "Викентий хорошо отметил день рождения: покушал пиццу, " +
                         //  "посмотрел кино, пообщался со студентами в чате";
 
@@ -30,7 +30,8 @@ namespace TaskForLesson2
             }
 
             double average_sum = allWordLength / wordsArray.Length;
-            Console.WriteLine(Math.Round(average_sum)); //используется метод округление до целого числа double 
+            double len = Math.Round(average_sum);
+            Console.WriteLine(len); //используется метод округление до целого числа double 
                                                         //можно так же просто выбрать тип int и ничего не округлять 
                                                         //самостоятельно
         }
@@ -52,8 +53,7 @@ namespace TaskForLesson2
                     final += ch;
                 }
             Console.WriteLine(final);
-            Console.ReadLine();
-
+          
         }
 
         static void Lowercase()
@@ -75,66 +75,64 @@ namespace TaskForLesson2
 
 
             Console.WriteLine(counter);
-            Console.ReadLine();
         }
 
         static void Validator()
         {
             string text = "я плохо учил русский язык. забываю начинать предложения " +
                           "с заглавной. хорошо, что можно написать программу!";
-            char[] separators = new char[] { '.', '!', '?', ' ' };
-            string[] wordsArray = text.Split(separators, StringSplitOptions.None);
-            string d = "";
-            text.Replace(text.Substring(0, 1), text.Substring(0, 1).ToUpper());
-            //for (int i = 0; i < wordsArray.Length; i++)
-            //{
-            //    wordsArray[0].Replace(wordsArray[0].Substring(0, 1) , wordsArray[0].Substring(0,1).ToUpper());
-            //    Console.WriteLine(wordsArray[i]);
-            //}
-               // item.Substring(0,1).ToUpper();
-            
+          
              
             Console.WriteLine(text);
-            Console.ReadLine();
         }
 
         public static void Task2()
         {
+            bool work = true;
 
-            Console.WriteLine("\n-----------------------" +
-                              "\nвведите номер задания:\n" +
-                              "-----------------------\n");
-
-            string caseSwitch = Console.ReadLine();
-
-            switch (caseSwitch)
+            while (work)
             {
-                case "1":
-                    Console.WriteLine("1.2.1");
-                    Averages();
-                    Console.ReadLine();
-                    break;
 
-                case "2":
-                    Console.WriteLine("1.2.2");
-                    Doubler();
-                    break;
+                Console.WriteLine("-----------------------" +
+                              "\nВведите номер задания STRING, NOT STING\n" +
+                               "Для возврата введите: *\n" +
+                              "-----------------------");
 
-                case "3":
-                    Console.WriteLine("1.2.3");
-                    Lowercase();
-                    break;
+                string caseSwitch = Console.ReadLine();
 
-                case "4":
-                    Console.WriteLine("1.2.4");
-                    Validator();
-                    break;
+                switch (caseSwitch)
+                {
+                    case "1":
+                        Console.WriteLine("1.2.1\nВведите текст");
+                        Averages(Console.ReadLine());                       
+                        break;
 
-                default:
-                    Console.WriteLine("Default case");
-                    break;
+                    case "2":
+                        Console.WriteLine("1.2.2");
+                        Doubler();
+                        break;
+
+                    case "3":
+                        Console.WriteLine("1.2.3");
+                        Lowercase();
+                        break;
+
+                    case "4":
+                        Console.WriteLine("1.2.4");
+                        
+                        break;
+
+                    case "*":
+                        work = false;
+                        Tasks.ListOfTasks();
+                        break;
+
+                    default:
+                        Console.WriteLine("Default case");
+                        break;
+                }
+
             }
-
         }
     
     }

@@ -397,68 +397,79 @@ namespace TaskForLesson2
 
         public static void Task1()
         {
-            Console.WriteLine("\n-----------------------" +
-                              "\nвведите номер задания:\n" +
-                              "-----------------------\n");
+            
+            bool work = true;
 
-            string caseSwitch = Console.ReadLine();
-
-            switch (caseSwitch)
+            while (work)
             {
-                case "1":
-                    Console.WriteLine("1.1.1");
-                    Rectangle();
-                    break;
+                Console.WriteLine("-----------------------" +
+                              "\nВведите номер задания THE MAGNIFICENT TEN\n" +
+                               "Для возврата введите: *\n" +
+                              "-----------------------");
+                string caseSwitch = Console.ReadLine();
 
-                case "2":
-                    Console.WriteLine("1.1.2");
-                    Triangle();
-                    break;
+                switch (caseSwitch)
+                {
+                    case "1":
+                        Console.WriteLine("1.1.1");
+                        Rectangle();
+                        break;
 
-                case "3":
-                    Console.WriteLine("1.1.3");
-                    Another_Triangle();
-                    break;
+                    case "2":
+                        Console.WriteLine("1.1.2");
+                        Triangle();
+                        break;
 
-                case "4":
-                    Console.WriteLine("1.1.4");
-                    Xmas_Tree();
-                    break;
+                    case "3":
+                        Console.WriteLine("1.1.3");
+                        Another_Triangle();
+                        break;
 
-                case "5":
-                    Console.WriteLine("1.1.5");
-                    Sum_Of_Numbers();
-                    break;
+                    case "4":
+                        Console.WriteLine("1.1.4");
+                        Xmas_Tree();
+                        break;
 
-                case "6":
-                    Console.WriteLine("1.1.6   \n" +
-                                      "///// Чтобы вернуться к выбору заданий введите : *\n");
-                    Font_Adjustment();
-                    break;
+                    case "5":
+                        Console.WriteLine("1.1.5");
+                        Sum_Of_Numbers();
+                        break;
 
-                case "7":
-                    Console.WriteLine("1.1.7");
-                    Array_Processing(RandArray());
-                    break;
+                    case "6":
+                        Console.WriteLine("1.1.6   \n" +
+                                          "///// Чтобы вернуться к выбору заданий введите : *\n");
+                        Font_Adjustment();
+                        break;
 
-                case "8":
-                    Console.WriteLine("1.1.8");
-                    No_Positive();
-                    break;
+                    case "7":
+                        Console.WriteLine("1.1.7");
+                        Array_Processing(RandArray());
+                        break;
 
-                case "9":
-                    Console.WriteLine("1.1.9");
-                    NonNegative_Sum();
-                    break;
+                    case "8":
+                        Console.WriteLine("1.1.8");
+                        No_Positive();
+                        break;
 
-                case "10":
-                    Console.WriteLine("1.1.10");
-                    Two_Dimensional();
-                    break;
+                    case "9":
+                        Console.WriteLine("1.1.9");
+                        NonNegative_Sum();
+                        break;
 
-                default:
-                    Console.WriteLine("Default case");
-                    break;
+                    case "10":
+                        Console.WriteLine("1.1.10");
+                        Two_Dimensional();
+                        break;
+
+                    case "*":
+                        work = false;
+                        Tasks.ListOfTasks();
+                        break;
+
+                    default:
+                        Console.WriteLine("Default case");
+                        break;
+                }
             }
 
         }
