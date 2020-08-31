@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.registr-form{
+max-width: 400px;
+width: 400px;
+height: 300px;
+background-color: rgba(19, 146, 189, 0.849);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+color: whitesmoke;
+border-style: solid;
+border-width: 5px;
+border-color: rgb(15, 120, 168);  
+font-style: normal;
+}
+
+.registr{
+    margin-top: 25px;
+  margin-left: 25px;
+  font-size: 25px;
+  margin-bottom: 0px;
+  
+}
+
+.line{
+height: 1px;
+width: 100%;
+background-color: aliceblue ;
+margin-bottom: 25px;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-right: 45px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.password{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 45px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+.element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 150px;
+    font-size: 18px;
+    background-color:  aliceblue ;
+}
+
+.send{
+   cursor: pointer;
+   height: 26px;
+   width: 86px;
+   color: black;
+   font-size: 13px;
+   background-color: rgb(231, 213, 109);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left: 25px;
+   margin-bottom: 25px;
+   margin-top: 20px;
+}
