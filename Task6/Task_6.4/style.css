@@ -23,7 +23,8 @@ body{
 
 img{
    
-    width: 50px;
+    width: 60px;
+    height: 60px;
     background-color: rgb(217, 245, 245);
     opacity: .5;
 }
