@@ -9,9 +9,11 @@ namespace PL.Interfaces
 {
     public interface IUserPL
     {
-        void DisplayAllUsers();
-        bool AddUser();
-        bool DeleteUser();
+        IEnumerable<Users> DisplayAllUsers();
+        bool AddUser(string name, string data);
+        bool DeleteUser(Guid id);
         Guid SelectedUser();
+        Users GetUserByID(Guid id);
+        bool EditUser(Guid id, string name, string data);
     }
 }

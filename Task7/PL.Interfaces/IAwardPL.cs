@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entitiens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,10 @@ namespace PL.Interfaces
 {
     public interface IAwardPL
     {
-        void DisplayAllAwards();
-        bool AddAward();
-        bool DeleteAward();
-        Guid SelectedAward();
+        IEnumerable<Awards> DisplayAllAwards();
+        bool AddAward(string title);
+        bool DeleteAward(Guid id);
+        Awards GetAwardByID(Guid id);
+        bool EditAward(Guid id, string title);
     }
 }

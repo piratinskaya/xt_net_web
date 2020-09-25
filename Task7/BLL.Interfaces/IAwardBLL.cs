@@ -13,5 +13,6 @@ namespace BLL.Interfaces
         bool DeleteAward(Guid id);
         IEnumerable<Awards> GetAllAwards();
         Awards GetAwardByID(Guid id);
+        bool EditAward(Guid id, string title);
     }
 }

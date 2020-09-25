@@ -29,22 +29,31 @@ namespace BLL
                 return false;
             }
         }
+        public IEnumerable<Users> AllUsers => _usersDAL.GetAllUsers();
 
-        public IEnumerable<Users> GetAllUsers()
-        {
-            return _usersDAL.GetAllUsers();
-        }
-
-        public Users GetUserByID(Guid id)
-        {
-            return _usersDAL.GetUserByID(id);
-        }
+        public Users GetUserByID(Guid id) => _usersDAL.GetUserByID(id);
 
         public bool SaveUser(Users user)
         {
             try
             {
                 _usersDAL.SaveUser(user);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool EditUser(Guid id, string name, DateTime data)
+        {
+            try
+            {
+                Users newUser = new Users(name, data)
+                {
+                    ID = id
+                };
+                _usersDAL.SaveUser(newUser);
                 return true;
             }
             catch

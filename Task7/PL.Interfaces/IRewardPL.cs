@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entitiens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,12 @@ namespace PL.Interfaces
     public interface IRewardPL
     {
         bool RewardUser(Guid user, Guid award);
-        void DisplayAllRewards();
+        IEnumerable<Rewards> AllRewards();
+        List<Users> GetUsersWithCurrentReward(Guid idAward);
+        bool DeleteUserReward(Guid user);
+        bool DeleteAwardReward(Guid award);
+        bool DeleteReward(Guid idUser, Guid idAward);
+        bool EditUser(Users newUser);
+        bool EditAward(Awards newAward);
     }
 }

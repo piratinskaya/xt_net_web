@@ -11,7 +11,8 @@ namespace BLL.Interfaces
     {
         bool SaveUser(Users user);
         bool DeleteUser(Guid id);
-        IEnumerable<Users> GetAllUsers();
+        IEnumerable<Users> AllUsers { get; }
         Users GetUserByID(Guid id);
+        bool EditUser(Guid id, string name, DateTime data);
     }
 }

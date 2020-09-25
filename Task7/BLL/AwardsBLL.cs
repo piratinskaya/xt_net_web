@@ -50,5 +50,22 @@ namespace BLL
                 return false;
             }
         }
+
+        public bool EditAward(Guid id, string title)
+        {
+            try
+            {
+                Awards newAward = new Awards(title)
+                {
+                    IDAward = id
+                };
+                _awardDAL.SaveAward(newAward);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
